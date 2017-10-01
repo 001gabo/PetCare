@@ -66,9 +66,10 @@ $route['contactenos']="principal/contactenos";
 $route['login']='auth/index';
 $route['signin']='auth/signin';
 $route['register']='auth/register';
+$route['logout']='auth/logout';
 
 
-//Modulo Home:  Admin, Empleado, Cliente
-$route['admin']="admin/index";
+//Modulo Home:  Root, Empleado, Cliente
+$route['admin']="root/index";
 $route['empleado']="empleado/index";
 $route['cliente']="cliente/index";

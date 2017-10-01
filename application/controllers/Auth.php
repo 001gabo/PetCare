@@ -96,6 +96,11 @@ class Auth extends CI_Controller {
                 elseif ($this->session->userdata('usuarioTipo')=='cliente'){
                     redirect('cliente');
                 }
+                elseif ($this->session->userdata('usuarioTipo')=='root'){
+                    redirect('admin');
+
+
+                }
             }
 
         }else{
@@ -124,6 +129,9 @@ class Auth extends CI_Controller {
 
     public function logout(){
         //session_destroy();
+        $this->session->unset_userdata('usuarioCorreo');
+        $this->session->unset_userdata('usuarioTipo');
+        session_destroy();
         redirect(base_url());
     }
 
