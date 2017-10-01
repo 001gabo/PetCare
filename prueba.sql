@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-10-2017 a las 17:44:03
+-- Tiempo de generación: 02-10-2017 a las 00:19:04
 -- Versión del servidor: 10.1.25-MariaDB
 -- Versión de PHP: 5.6.31
 
@@ -40,9 +40,10 @@ CREATE TABLE `tbl_usuario` (
 --
 
 INSERT INTO `tbl_usuario` (`usuarioid`, `usuarioCorreo`, `usuarioClave`, `usuarioTipo`) VALUES
-(1, 'marvin.fortin@outlook.com', '12345678', 'root'),
-(2, 'marvin.fortin@gmail.com', '12345678', 'cliente'),
-(3, 'marvin.fortin@yahoo.com', '12345678', 'empleado');
+(1, 'marvin.fortin@outlook.com', '25d55ad283aa400af464c76d713c07ad', 'root'),
+(2, 'marvin.fortin@gmail.com', '25d55ad283aa400af464c76d713c07ad', 'cliente'),
+(3, 'marvin.fortin@yahoo.com', '25d55ad283aa400af464c76d713c07ad', 'empleado'),
+(4, 'marvin.fortin@live.com', '25d55ad283aa400af464c76d713c07ad', 'root');
 
 --
 -- Índices para tablas volcadas
@@ -62,7 +63,7 @@ ALTER TABLE `tbl_usuario`
 -- AUTO_INCREMENT de la tabla `tbl_usuario`
 --
 ALTER TABLE `tbl_usuario`
-  MODIFY `usuarioid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;COMMIT;
+  MODIFY `usuarioid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

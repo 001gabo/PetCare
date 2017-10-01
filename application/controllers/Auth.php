@@ -53,60 +53,55 @@ class Auth extends CI_Controller {
 	// Función q me da entrada a la home
 	public function signin(){
 
-        // Falta verificacion
-       // $this->Entra();
-       /* if($this->input->post('frmRegistro')) {
+        $this->form_validation->set_rules('correo', 'Username', 'required|valid_email');
+        $contra = $this->form_validation->set_rules('clave', 'Password',  array('min_length[5]','max_length[12]','required'));
 
-            $this->form_validation->set_rules('nombre', 'Name', 'required');
-            $this->form_validation->set_rules('correo', 'Usuario', 'required|valid_email');
-            $this->form_validation->set_rules('pass', 'Contraseña', array('min_length[5]', 'max_length[12]', 'required'));
+        if ($this->form_validation->run('valida_login') == FALSE)
+        {
+            $this->index();
+        }
+        else
+        {
+
+            $data = array('usuarioCorreo' => $this->input->post('correo') ,
+                'usuarioClave' => md5($this->input->post('clave'))
+            );
+
+            $this->load->model('auth_model');
+            $resultados= $this->auth_model->getUser($data);
 
 
-            if($this->form_validation->run() != FALSE){
+            if($resultados->num_rows() == 1 ){
 
+                foreach ($resultados->result() as $sess){
+                    $sess_data['logged_in'] = 'conectado';
+                    $sess_data['usuarioCorreo'] = $sess->usuarioCorreo;
+                    $sess_data['usuarioTipo'] = $sess->usuarioTipo;
+                    $this->session->set_userdata($sess_data);
+
+
+                    if($this->session->userdata('usuarioTipo')=='empleado'){
+                        redirect('empleado');
+                    }
+                    elseif ($this->session->userdata('usuarioTipo')=='cliente'){
+                        redirect('cliente');
+                    }
+                    elseif ($this->session->userdata('usuarioTipo')=='root'){
+                        redirect('admin');
+
+
+                    }
+                }
+
+            }else{
+                echo "<script>alert('No Valido: Usuario , Contraseña ');history.go(-1);</script>";
+                // echo " No valido";
             }
-            else{
-                 $this->register();
-            }
+
         }
 
-       */
 
 
-        $data = array('usuarioCorreo' => $this->input->post('correo') ,
-            'usuarioClave' => $this->input->post('clave')
-        );
-
-        $this->load->model('auth_model');
-        $resultados= $this->auth_model->getUser($data);
-
-
-        if($resultados->num_rows() == 1 ){
-
-            foreach ($resultados->result() as $sess){
-                $sess_data['logged_in'] = 'conectado';
-                $sess_data['usuarioCorreo'] = $sess->usuarioCorreo;
-                $sess_data['usuarioTipo'] = $sess->usuarioTipo;
-                $this->session->set_userdata($sess_data);
-
-
-                if($this->session->userdata('usuarioTipo')=='empleado'){
-                    redirect('empleado');
-                }
-                elseif ($this->session->userdata('usuarioTipo')=='cliente'){
-                    redirect('cliente');
-                }
-                elseif ($this->session->userdata('usuarioTipo')=='root'){
-                    redirect('admin');
-
-
-                }
-            }
-
-        }else{
-            echo "<script>alert('No Valido: Usuario , Contraseña ');history.go(-1);</script>";
-           // echo " No valido";
-        }
 
 
 
