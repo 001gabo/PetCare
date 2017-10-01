@@ -53,9 +53,6 @@ $route['default_controller'] = 'principal';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-//Rutas de prueba
-$route['catalog/edit/(:any)']="product/update";
-
 
 
 //Modulo Principal
@@ -68,11 +65,10 @@ $route['contactenos']="principal/contactenos";
 //Modulo Auth
 $route['login']='auth/index';
 $route['signin']='auth/signin';
-$route['logout']='auth/logout';
 $route['register']='auth/register';
 
-//Modulo Home
-$route['index']="home/index";
-$route['admin']="home/admin";
-$route['empleado']="home/empleado";
-$route['cliente']="home/cliente";
+
+//Modulo Home:  Admin, Empleado, Cliente
+$route['admin']="admin/index";
+$route['empleado']="empleado/index";
+$route['cliente']="cliente/index";

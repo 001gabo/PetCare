@@ -5,40 +5,42 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-		$data = new stdClass();
-        $data->title="PetCare|Inicio";
-        $data->contenido ='index'; 
-        //prueba
-		 $this->load->view('homeContent',$data);
+		$data = array();
+        $data['contenido'] = 'home/index';
+        $data['title'] ="Inicio|PetCare";
+
+        $this->load->view('homeContent',$data);
+		
 	}
 
+	/*
 	public function Admin(){
-		//if($this->$this->session->userdata('perfil')== FALSE || $this->session->redirect(base_url().'login'));
-		$data = new stdClass();
-        $data->title="PetCare|Inicio";
-        $data->contenido ='Admin'; 
+		$data = array();
+        $data['contenido'] = 'home/admin';
+        $data['title'] ="Inicio|PetCare";
+             
         $this->load->view('homeContent',$data);
 
 	}
 
 	public function Empleado(){
-		$data = new stdClass();
-        $data->title="PetCare|Inicio";
-        $data->contenido ='Empleado'; 
+		$data = array();
+        $data['contenido'] = 'home/empleado';
+        $data['title'] ="Inicio|PetCare";
+             
         $this->load->view('homeContent',$data);
+
 	}
 
 	public function Cliente(){
-		/*if($this->$this->session->userdata('perfil')== FALSE){
-			redirect(base_url().'login');
-		}
-		*/
-		$data = new stdClass();
-        $data->title="PetCare|Inicio";
-        $data->contenido ='Cliente'; 
+		$data = array();
+        $data['contenido'] = 'home/cliente';
+        $data['title'] ="Inicio|PetCare";
+             
         $this->load->view('homeContent',$data);
-
+		
 	}
+	*/
 
 }
 
