@@ -8,7 +8,7 @@ class Home extends CI_Controller {
 		$data = new stdClass();
         $data->title="PetCare|Inicio";
         $data->contenido ='index'; 
-
+        //prueba
 		 $this->load->view('homeContent',$data);
 	}
 
