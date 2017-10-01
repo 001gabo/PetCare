@@ -68,8 +68,7 @@ $route['signin']='auth/signin';
 $route['register']='auth/register';
 
 
-//Modulo Home
-$route['index']="home/index";
-$route['admin']="home/admin";
-$route['empleado']="home/empleado";
-$route['cliente']="home/cliente";
+//Modulo Home:  Admin, Empleado, Cliente
+$route['admin']="admin/index";
+$route['empleado']="empleado/index";
+$route['cliente']="cliente/index";

@@ -46,4 +46,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
     <hr>
     <?php echo validation_errors();?>
-    <h1>tttt</h1>

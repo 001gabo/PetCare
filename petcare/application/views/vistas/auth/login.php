@@ -22,7 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                     <div class="form-group">
                         <label for="pass">Contraseña</label>
-                        <input type="password" name="pass" class="form-control" id="pass" placeholder="Contraseña">
+                        <input type="password" name="clave" class="form-control" id="pass" placeholder="Contraseña">
                     </div>
                  
                     <button type="submit" class="btn btn-default">Entrar</button>

@@ -2,16 +2,25 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Auth extends CI_Controller {
-
     /**
-    // Función que muestra vista de login
      * Auth constructor.
      */
     public function __construct()
     {
         parent::__construct();
-
+        $this->load->model('auth_model');
     }
+
+    /**
+    // Función que muestra vista de login
+     * Auth constructor.
+     *
+    $this->load->model('Common_model'); # Load Model
+    $result = $this->Common_model->getUser(); # Access the model function
+     *
+  */
+
+
 
     public function index(){
         $data = array();
@@ -45,7 +54,7 @@ class Auth extends CI_Controller {
 	public function signin(){
 
         // Falta verificacion
-        $this->Entra();
+       // $this->Entra();
        /* if($this->input->post('frmRegistro')) {
 
             $this->form_validation->set_rules('nombre', 'Name', 'required');
@@ -62,6 +71,43 @@ class Auth extends CI_Controller {
         }
 
        */
+
+
+        $data = array('usuarioCorreo' => $this->input->post('correo') ,
+            'usuarioClave' => $this->input->post('clave')
+        );
+
+        $this->load->model('auth_model');
+        $resultados= $this->auth_model->getUser($data);
+
+
+        if($resultados->num_rows() == 1 ){
+
+            foreach ($resultados->result() as $sess){
+                $sess_data['logged_in'] = 'conectado';
+                $sess_data['usuarioCorreo'] = $sess->usuarioCorreo;
+                $sess_data['usuarioTipo'] = $sess->usuarioTipo;
+                $this->session->set_userdata($sess_data);
+
+
+                if($this->session->userdata('usuarioTipo')=='empleado'){
+                    redirect('empleado');
+                }
+                elseif ($this->session->userdata('usuarioTipo')=='cliente'){
+                    redirect('cliente');
+                }
+            }
+
+        }else{
+            echo "<script>alert('No Valido: Usuario , Contraseña ');history.go(-1);</script>";
+           // echo " No valido";
+        }
+
+
+
+
+       //redirect("admin");
+
 
 	}
 

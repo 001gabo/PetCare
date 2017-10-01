@@ -13,6 +13,7 @@ class Home extends CI_Controller {
 		
 	}
 
+	/*
 	public function Admin(){
 		$data = array();
         $data['contenido'] = 'home/admin';
@@ -39,6 +40,7 @@ class Home extends CI_Controller {
         $this->load->view('homeContent',$data);
 		
 	}
+	*/
 
 }
 
