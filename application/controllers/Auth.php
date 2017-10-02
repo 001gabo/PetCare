@@ -53,15 +53,7 @@ class Auth extends CI_Controller {
 	// Función q me da entrada a la home
 	public function signin(){
 
-        $this->form_validation->set_rules('correo', 'Username', 'required|valid_email');
-        $contra = $this->form_validation->set_rules('clave', 'Password',  array('min_length[5]','max_length[12]','required'));
-
-        if ($this->form_validation->run('valida_login') == FALSE)
-        {
-            $this->index();
-        }
-        else
-        {
+    
 
             $data = array('usuarioCorreo' => $this->input->post('correo') ,
                 'usuarioClave' => md5($this->input->post('clave'))
@@ -98,7 +90,7 @@ class Auth extends CI_Controller {
                 // echo " No valido";
             }
 
-        }
+        
 
 
 	}
