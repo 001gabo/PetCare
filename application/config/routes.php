@@ -61,7 +61,7 @@ $route['acerca']="principal/acerca";
 $route['servicios']="principal/servicios";
 $route['precios']="principal/precios";
 $route['contactenos']="principal/contactenos";
-$route['cita']="citas/cita";
+
 //Modulo Auth
 $route['login']='auth/index';
 $route['signin']='auth/signin';
