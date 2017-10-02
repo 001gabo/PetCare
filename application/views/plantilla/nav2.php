@@ -21,7 +21,7 @@
                 <li <?php if(isset($active) && $active == 'contactenos'){ echo 'class="active"'; } ?>><a href="contactenos">C</a></li>
 
             <?php elseif( isset($_SESSION['usuarioTipo']) && $_SESSION['usuarioTipo'] == 'cliente' ) : ?>
-                <li <?php if(isset($active) && $active == 'acerca'){ echo 'class="active"'; } ?> ><a href="acerca">Citas</a></li>
+                <li <?php if(isset($active) && $active == 'citas'){ echo 'class="active"'; } ?> ><a href="citas">Citas</a></li>
                 <li <?php if(isset($active) && $active == 'servicios'){ echo 'class="active"'; } ?>><a href="servicios">B</a></li>
                 <li <?php if(isset($active) && $active == 'precios'){ echo 'class="active"'; } ?>><a href="precios">P</a></li>
                 <li <?php if(isset($active) && $active == 'contactenos'){ echo 'class="active"'; } ?>><a href="contactenos">C</a></li>
