@@ -66,6 +66,7 @@ $route['contactenos']="principal/contactenos";
 $route['login']='auth/index';
 $route['signin']='auth/signin';
 $route['register']='auth/register';
+$route['singup']='auth/singup';
 $route['logout']='auth/logout';
 
 

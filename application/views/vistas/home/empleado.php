@@ -20,5 +20,5 @@
 
     ?>
     <br>
-    <a href="empleado/logout">Cerrar Sesión </a>
+
 </div>

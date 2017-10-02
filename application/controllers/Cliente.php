@@ -27,11 +27,6 @@ class Cliente extends CI_Controller
 
     }
 
-    public function logout() {
-        $this->session->unset_userdata('usuarioCorreo');
-        $this->session->unset_userdata('usuarioTipo');
-        session_destroy();
-        redirect('login');
-    }
+
 
 }

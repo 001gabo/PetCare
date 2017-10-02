@@ -101,15 +101,13 @@ class Auth extends CI_Controller {
         }
 
 
-
-
-
-
-
-       //redirect("admin");
-
-
 	}
+
+	//procesa register
+	public function signup(){
+
+
+    }
 
 	// Función que muestra vista de registro
 	public function register(){

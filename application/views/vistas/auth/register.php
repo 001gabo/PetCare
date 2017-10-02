@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="panel-body">
                 <?php if(validation_errors()){echo '<div class="alert alert-danger" role="alert">'. validation_errors().'</div>';}?>
 
-                <?php echo form_open('signin');?>
+                <?php echo form_open('signup');?>
 
                 <div class="form-group">
                     <label for="name">Nombre</label>

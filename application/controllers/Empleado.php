@@ -26,11 +26,5 @@ class Empleado extends CI_Controller
         // $this->load->view('member/index', $data);
     }
 
-    public function logout() {
-        $this->session->unset_userdata('usuarioCorreo');
-        $this->session->unset_userdata('usuarioTipo');
-        session_destroy();
-        redirect('login');
-    }
 
 }
