@@ -75,4 +75,5 @@ $route['admin']="root/index";
 $route['empleado']="empleado/index";
 $route['cliente']="cliente/index";
 
-//Modulo Cuenta 
+//Modulo Citas
+$route['cita']="citas/cita";
