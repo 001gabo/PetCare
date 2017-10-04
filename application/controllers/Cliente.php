@@ -27,6 +27,15 @@ class Cliente extends CI_Controller
 
     }
 
+    public function citas()
+    {
+        $data = array();
+        $data['title'] = "Citas|PetCare";
+        $data['contenido']="citas/cita";
+        $data['active']="cita";
+        $this->load->view('homeContent',$data);
+    }
+
 
 
 }
