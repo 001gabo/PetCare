@@ -25,6 +25,7 @@
                 <li <?php if(isset($active) && $active == 'servicios'){ echo 'class="active"'; } ?>><a href="servicios">B</a></li>
                 <li <?php if(isset($active) && $active == 'precios'){ echo 'class="active"'; } ?>><a href="precios">P</a></li>
                 <li <?php if(isset($active) && $active == 'contactenos'){ echo 'class="active"'; } ?>><a href="contactenos">C</a></li>
+                <li <?php if(isset($active) && $active == 'cita'){ echo 'class="active"'; } ?>><a href="cita">C</a></li>
 
 
             <?php elseif( isset($_SESSION['usuarioTipo']) && $_SESSION['usuarioTipo'] == 'root' ) : ?>

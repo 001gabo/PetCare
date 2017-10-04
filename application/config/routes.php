@@ -77,4 +77,4 @@ $route['cliente']="cliente/index";
 
 
 //Modulo Citas
-$route['citas']="citas/cita";
+$route['cita']="citas/cita";

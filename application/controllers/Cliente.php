@@ -27,13 +27,17 @@ class Cliente extends CI_Controller
 
     }
 
-    public function citas()
-    {
+    
+ public function cita() {
+        //$data['username'] = $this->session->userdata('username');
+
         $data = array();
-        $data['title'] = "Citas|PetCare";
-        $data['contenido']="citas/cita";
+        $data['contenido'] = 'citas/cita';
+        $data['title'] ="Cita|PetCare";
         $data['active']="cita";
         $this->load->view('homeContent',$data);
+
+
     }
 
 
