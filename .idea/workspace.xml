@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1db8cef3-a7a6-491b-a780-4ea1fbaefce9" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/controllers/Home.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/plantilla/nav2.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/routes.php" afterPath="$PROJECT_DIR$/application/config/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Auth.php" afterPath="$PROJECT_DIR$/application/controllers/Auth.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/plantilla/head.php" afterPath="$PROJECT_DIR$/application/views/plantilla/head.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/vistas/auth/register.php" afterPath="$PROJECT_DIR$/application/views/vistas/auth/register.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/vistas/principal/acerca.php" afterPath="$PROJECT_DIR$/application/views/vistas/principal/acerca.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/vistas/principal/contactenos.php" afterPath="$PROJECT_DIR$/application/views/vistas/principal/contactenos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/vistas/principal/index.php" afterPath="$PROJECT_DIR$/application/views/vistas/principal/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/vistas/principal/precios.php" afterPath="$PROJECT_DIR$/application/views/vistas/principal/precios.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/vistas/principal/servicios.php" afterPath="$PROJECT_DIR$/application/views/vistas/principal/servicios.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,21 +27,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cliente.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Cliente.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Empleado.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Empleado.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
               <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="77" column="16" lean-forward="false" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -77,7 +67,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/vistas/principal/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
@@ -157,7 +147,6 @@
         <option value="$PROJECT_DIR$/application/views/vistas/home/empleado.php" />
         <option value="$PROJECT_DIR$/application/views/vistas/home/cliente.php" />
         <option value="$PROJECT_DIR$/application/views/vistas/home/root.php" />
-        <option value="$PROJECT_DIR$/application/config/routes.php" />
         <option value="$PROJECT_DIR$/application/views/vistas/auth/register.php" />
         <option value="$PROJECT_DIR$/application/views/plantilla/head.php" />
         <option value="$PROJECT_DIR$/application/controllers/Home.php" />
@@ -167,6 +156,7 @@
         <option value="$PROJECT_DIR$/application/views/vistas/principal/precios.php" />
         <option value="$PROJECT_DIR$/application/views/vistas/principal/servicios.php" />
         <option value="$PROJECT_DIR$/application/views/vistas/principal/index.php" />
+        <option value="$PROJECT_DIR$/application/config/routes.php" />
       </list>
     </option>
   </component>
@@ -228,28 +218,6 @@
               <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="petcare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="petcare" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plantilla" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="petcare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="petcare" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vistas" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="petcare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="petcare" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vistas" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="principal" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -296,12 +264,12 @@
       <workItem from="1506853888567" duration="2812000" />
       <workItem from="1506857225903" duration="1952000" />
       <workItem from="1506859204953" duration="11011000" />
-      <workItem from="1507151581643" duration="1544000" />
+      <workItem from="1507151581643" duration="2337000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51345000" />
+    <option name="totallyTimeSpent" value="52138000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -628,14 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="68" column="14" lean-forward="false" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/vistas/auth/register.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -768,6 +728,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="77" column="16" lean-forward="false" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
           <folding />
         </state>
       </provider>

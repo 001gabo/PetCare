@@ -74,3 +74,5 @@ $route['logout']='auth/logout';
 $route['admin']="root/index";
 $route['empleado']="empleado/index";
 $route['cliente']="cliente/index";
+
+//Modulo Cuenta 
