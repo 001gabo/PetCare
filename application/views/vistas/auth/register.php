@@ -20,14 +20,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <label for="name">Nombre</label>
                     <input type="text" name="nombre" class="form-control" id="name" placeholder="Nombre">
                 </div>
+
                 <div class="form-group">
                     <label for="email">Correo eléctronico</label>
                     <input type="email" name="correo" value="<?php echo set_value('correo');?>" class="form-control" id="email" placeholder="Correo eléctronico">
                 </div>
                 <div class="form-group">
                     <label for="pass">Contraseña</label>
-                    <input type="password" name="pass" class="form-control" id="pass" placeholder="Contraseña">
+                    <input type="password" name="clave" class="form-control" id="pass" placeholder="Contraseña">
                 </div>
+
+                <div class="form-group">
+                    <label for="pass">Contraseña</label>
+                    <input type="password" name="clave_confirma" class="form-control" id="pass" placeholder="Contraseña">
+                </div>
+
                 <button type="submit" class="btn btn-default" name="frmRegistro" >Registrarse</button>
 
                 </form>
