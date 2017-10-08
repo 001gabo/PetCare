@@ -6,7 +6,7 @@
  * Time: 08:24
  */
 
-class Cliente extends CI_Controller
+class Citas extends CI_Controller
 {
 
     public function __construct() {
@@ -27,8 +27,18 @@ class Cliente extends CI_Controller
 
     }
 
+    
+ public function cita() {
+        //$data['username'] = $this->session->userdata('username');
+
+        $data = array();
+        $data['contenido'] = 'citas/cita';
+        $data['title'] ="Citas|PetCare";
+        $data['active']="cita";
+        $this->load->view('homeContent',$data);
 
 
+    }
 
 
 }
