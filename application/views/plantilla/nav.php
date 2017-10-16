@@ -29,7 +29,19 @@
 
 
             <?php elseif( isset($_SESSION['usuarioTipo']) && $_SESSION['usuarioTipo'] == 'root' ) : ?>
-                <li <?php if(isset($active) && $active == 'acerca'){ echo 'class="active"'; } ?> ><a href="acerca">Mantenimiento</a></li>
+
+                <li class="dropdown">
+                    <a  <?php if(isset($active) && $active == 'usuarios'){ echo 'class="active"'; } ?>  href="usuarios" class="dropdown-toggle" data-toggle="dropdown"> Mantenimiento <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li> <a href="usuario"> Usuarios </a></li>
+
+                        <li class="divider"></li>
+
+                        <li><a href="logout"> <span class="fa fa-external-link"></span> Configuración </a></li>
+
+                    </ul>
+                </li>
+
                 <li <?php if(isset($active) && $active == 'servicios'){ echo 'class="active"'; } ?>><a href="servicios">B</a></li>
                 <li <?php if(isset($active) && $active == 'precios'){ echo 'class="active"'; } ?>><a href="precios">P</a></li>
                 <li <?php if(isset($active) && $active == 'contactenos'){ echo 'class="active"'; } ?>><a href="contactenos">C</a></li>
@@ -54,7 +66,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">  <?php  echo  $this->session->userdata('usuarioCorreo');?> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li> <a href="#"> <span class="glyphicon glyphicon-cog"></span> Cuenta</a></li>
+                        <li> <a href="cuenta"> <span class="glyphicon glyphicon-cog"></span> Cuenta</a></li>
 
                         <li class="divider"></li>
 
@@ -74,3 +86,5 @@
         </ul>
     </div><!-- /.navbar-collapse -->
 </nav>
+
+<div class="container">

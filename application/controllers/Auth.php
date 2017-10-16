@@ -8,19 +8,13 @@ class Auth extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-
     }
-
-
-
-
 
     public function index(){
         $data = array();
         $data['contenido'] = 'auth/login';
         $data['title'] ="Iniciar Sesión|PetCare";
         $data['title_panel'] ="Iniciar Sesión";
-
         $data['titulo_inicio'] =" Proyecto CI: Web App";
 
         $this->load->view('inicial',$data);
@@ -67,7 +61,6 @@ class Auth extends CI_Controller {
                     elseif ($this->session->userdata('usuarioTipo')=='root'){
                         redirect('admin');
 
-
                     }
                 }
 
@@ -82,9 +75,9 @@ class Auth extends CI_Controller {
 
 	//procesa register
 	public function signup(){
-        /*
+
         $data = array();
-       // $this->form_validation->set_rules('username', 'Username', 'trim|required|alpha_numeric|min_length[4]|is_unique[users.username]', array('is_unique' => 'This username already exists. Please choose another one.'));
+        $this->form_validation->set_rules('username', 'Username', 'trim|required|alpha_numeric|min_length[4]|is_unique[users.username]', array('is_unique' => 'This username already exists. Please choose another one.'));
         $this->form_validation->set_rules('nombre', 'Name', 'trim|required|alpha_numeric|min_length[4]');
         $this->form_validation->set_rules('correo', 'Email', 'trim|required|valid_email|is_unique[users.email]');
         $this->form_validation->set_rules('clave', 'Password', 'trim|required|min_length[6]|max_length[12]');
@@ -120,9 +113,9 @@ class Auth extends CI_Controller {
                 */
                 echo "<script>alert('Fallo ');history.go(-1);</script>";
 
-          //  }
+    }
 
-        //}
+    }
 
 
     }

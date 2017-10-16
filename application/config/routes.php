@@ -77,3 +77,9 @@ $route['cliente']="cliente/index";
 
 //Modulo Citas
 $route['cita']="citas/cita";
+
+//Modulo Cuenta
+$route['cuenta']='cuenta/index';
+
+//Modulo Usuario
+$route['usuarios']='mantenimiento/usuario';
