@@ -8,6 +8,7 @@ class Auth extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
+        $this->load->model('mantenimiento_model');
     }
 
     public function index(){
@@ -48,17 +49,19 @@ class Auth extends CI_Controller {
                 foreach ($resultados->result() as $sess){
                     $sess_data['logged_in'] = 'conectado';
                     $sess_data['usuarioCorreo'] = $sess->usuarioCorreo;
-                    $sess_data['usuarioTipo'] = $sess->usuarioTipo;
+                   // $sess_data['usuarioTipo'] = $sess->usuarioTipo;
+                    $sess_data['idRol'] = $sess->idRol;
+                    $sess_data['idUsuario'] = $sess->idUsuario;
                     $this->session->set_userdata($sess_data);
 
 
-                    if($this->session->userdata('usuarioTipo')=='empleado'){
-                        redirect('empleado');
-                    }
-                    elseif ($this->session->userdata('usuarioTipo')=='cliente'){
+                    if($this->session->userdata('idRol')==1){
                         redirect('cliente');
                     }
-                    elseif ($this->session->userdata('usuarioTipo')=='root'){
+                    elseif ($this->session->userdata('idRol')==2){
+                        redirect('empleado');
+                    }
+                    elseif ($this->session->userdata('idRol')==3){
                         redirect('admin');
 
                     }
@@ -74,48 +77,32 @@ class Auth extends CI_Controller {
 	}
 
 	//procesa register
-	public function signup(){
+	public function login(){
 
-        $data = array();
-        $this->form_validation->set_rules('username', 'Username', 'trim|required|alpha_numeric|min_length[4]|is_unique[users.username]', array('is_unique' => 'This username already exists. Please choose another one.'));
-        $this->form_validation->set_rules('nombre', 'Name', 'trim|required|alpha_numeric|min_length[4]');
-        $this->form_validation->set_rules('correo', 'Email', 'trim|required|valid_email|is_unique[users.email]');
+        $this->form_validation->set_rules('nombre', 'Username', 'trim|required|alpha_numeric|min_length[4]');
+
+        $this->form_validation->set_rules('apellido', 'Name', 'trim|required|alpha_numeric|min_length[4]');
+        $this->form_validation->set_rules('correo', 'Email', 'trim|required|valid_email|is_unique[usuario.usuarioCorreo]');
         $this->form_validation->set_rules('clave', 'Password', 'trim|required|min_length[6]|max_length[12]');
-        $this->form_validation->set_rules('clave_confirma', 'Confirm Password', 'trim|required|min_length[6]|max_length[12] | matches[password]');
+        $this->form_validation->set_rules('usuario', 'UniqueUser', 'trim|required');
+        //$this->form_validation->set_rules('clave_confirma', 'Confirm Password', 'trim|required|min_length[6]|max_length[12] | matches[password]');
 
-        if ($this->form_validation->run('valida_signup') == FALSE)
-        {
-            $this->index();
+        $this->form_validation->set_error_delimiters('<p class="text-danger">','</p>');
+
+
+
+        if($this->form_validation->run() == true){
+
+            $crearUsuario = $this->mantenimiento_model->register();
+            echo "<script>alert(' Usuario Registrado ');history.go(-1);</script>";
+
+
+
+        }else{
+            echo "<script>alert('No Valido ');history.go(-1);</script>";
+            redirect('register');
         }
-        else {
 
-            $nombre = $this->input->post('nombre');
-            $correo = $this->input->post('correo');
-            $clave = $this->input->post('clave');
-
-            if ($this->auth_model->create_user($nombre, $correo, $clave)) {
-
-                // user creation ok
-                //$this->load->view('header');
-                //$this->load->view('user/register/register_success', $data);
-                //$this->load->view('footer');
-                echo "<script>alert('Se ha agregado Correctamente ');history.go(-1);</script>";
-
-            } else {
-
-                // user creation failed, this should never happen
-               // $data->error = 'There was a problem creating your new account. Please try again.';
-                /*
-                // send error to the view
-                $this->load->view('header');
-                $this->load->view('user/register/register', $data);
-                $this->load->view('footer');
-                */
-                echo "<script>alert('Fallo ');history.go(-1);</script>";
-
-    }
-
-    }
 
 
     }

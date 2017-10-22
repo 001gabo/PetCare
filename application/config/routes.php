@@ -66,7 +66,7 @@ $route['contactenos']="principal/contactenos";
 $route['login']='auth/index';
 $route['signin']='auth/signin';
 $route['register']='auth/register';
-$route['signup']='auth/singup';
+$route['registro']='auth/login';
 $route['logout']='auth/logout';
 
 
@@ -75,11 +75,34 @@ $route['admin']="root/index";
 $route['empleado']="empleado/index";
 $route['cliente']="cliente/index";
 
+
 //Modulo Citas
-$route['cita']="citas/cita";
+$route['cita_clientes']="citas/cita_clientes";
+$route['cita_empleados']="citas/cita_empleados";
+$route['cita_root']="citas/cita_root";
+$route['ModCitas']="citas/ver_modificar";
+$route['DelCitas']="citas/ver_eliminar";
 
 //Modulo Cuenta
 $route['cuenta']='cuenta/index';
 
-//Modulo Usuario
+//Modulo Mantenimiento
 $route['usuarios']='mantenimiento/usuario';
+$route['agregar_usuario']='mantenimiento/usuario_crea';
+$route['editar_usuario']='mantenimiento/usuario_edita';
+
+
+
+//Modulo de productos (controlador/funcion)
+$route['productos']="productos/index";
+$route['AddProductos']="productos/ver_agregar";
+$route['ModProductos']="productos/ver_modificar";
+$route['DelProductos']="productos/ver_eliminar";
+
+
+//modulo mascota
+$route['mis_mascotas']="mascota/mis_mascotas";
+$route['nueva_mascotas']="mascota/nueva_mascota";
+$route['perfil_mascota']="mascota/perfil";
+$route['eliminar_mascota']="mascota/eliminar_mascota";
+

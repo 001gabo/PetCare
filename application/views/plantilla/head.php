@@ -18,10 +18,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     -->
 
     <?php
-        echo link_tag('asset/css/estilos.css');
+        echo link_tag('css/estilos.css');
         echo link_tag('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css');
         echo link_tag('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css');
         echo link_tag('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+        echo link_tag("https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css");
+        echo  link_tag("//cdn.datatables.net/1.10.11/css/jquery.dataTables.css");
+
     ?>
 
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>

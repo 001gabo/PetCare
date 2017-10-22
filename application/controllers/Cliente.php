@@ -14,7 +14,7 @@ class Cliente extends CI_Controller
         if ($this->session->userdata('usuarioCorreo')=="") {
             redirect('login');
         }
-       // $this->load->helper('text');
+
     }
     public function index() {
         //$data['username'] = $this->session->userdata('username');

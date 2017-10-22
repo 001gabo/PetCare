@@ -10,7 +10,7 @@ class Auth_model extends CI_Model
     }
 
     public function getUser($data){
-        $query = $this->db->get_where('tbl_usuario',$data);
+        $query = $this->db->get_where('usuario',$data);
         return $query;
     }
 }

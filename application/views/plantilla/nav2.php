@@ -17,22 +17,23 @@
             <?php if( isset($_SESSION['usuarioTipo']) && $_SESSION['usuarioTipo'] == 'empleado' ): ?>
                 <li <?php if(isset($active) && $active == 'acerca'){ echo 'class="active"'; } ?> ><a href="acerca">Inventario</a></li>
                 <li <?php if(isset($active) && $active == 'servicios'){ echo 'class="active"'; } ?>><a href="servicios">Productos</a></li>
-                <li <?php if(isset($active) && $active == 'precios'){ echo 'class="active"'; } ?>><a href="precios">Precios</a></li>
+                <li <?php if(isset($active) && $active == 'precios'){ echo 'class="active"'; } ?>><a href="precios">P</a></li>
+                <li <?php if(isset($active) && $active == 'productos'){ echo 'class="active"'; } ?>><a href="productos">Productos</a></li>
                 <li <?php if(isset($active) && $active == 'contactenos'){ echo 'class="active"'; } ?>><a href="contactenos">C</a></li>
 
             <?php elseif( isset($_SESSION['usuarioTipo']) && $_SESSION['usuarioTipo'] == 'cliente' ) : ?>
-               <li <?php if(isset($active) && $active == 'cita'){ echo 'class="active"'; } ?>><a href="cita">Citas</a></li>
-                <li <?php if(isset($active) && $active == 'servicios'){ echo 'class="active"'; } ?>><a href="servicios">C</a></li>
+                <li <?php if(isset($active) && $active == 'acerca'){ echo 'class="active"'; } ?> ><a href="acerca">Citas</a></li>
+                <li <?php if(isset($active) && $active == 'servicios'){ echo 'class="active"'; } ?>><a href="servicios">B</a></li>
                 <li <?php if(isset($active) && $active == 'precios'){ echo 'class="active"'; } ?>><a href="precios">P</a></li>
+                <li <?php if(isset($active) && $active == 'productos'){ echo 'class="active"'; } ?>><a href="productos">Productos</a></li>
                 <li <?php if(isset($active) && $active == 'contactenos'){ echo 'class="active"'; } ?>><a href="contactenos">C</a></li>
-                
-
 
 
             <?php elseif( isset($_SESSION['usuarioTipo']) && $_SESSION['usuarioTipo'] == 'root' ) : ?>
                 <li <?php if(isset($active) && $active == 'acerca'){ echo 'class="active"'; } ?> ><a href="acerca">Mantenimiento</a></li>
                 <li <?php if(isset($active) && $active == 'servicios'){ echo 'class="active"'; } ?>><a href="servicios">B</a></li>
                 <li <?php if(isset($active) && $active == 'precios'){ echo 'class="active"'; } ?>><a href="precios">P</a></li>
+                <li <?php if(isset($active) && $active == 'productos'){ echo 'class="active"'; } ?>><a href="productos">Productos</a></li>
                 <li <?php if(isset($active) && $active == 'contactenos'){ echo 'class="active"'; } ?>><a href="contactenos">C</a></li>
 
             <?php else: ?>
@@ -41,6 +42,7 @@
                 <li <?php if(isset($active) && $active == 'acerca'){ echo 'class="active"'; } ?> ><a href="acerca">Acerca</a></li>
                 <li <?php if(isset($active) && $active == 'servicios'){ echo 'class="active"'; } ?>><a href="servicios">Servicios</a></li>
                 <li <?php if(isset($active) && $active == 'precios'){ echo 'class="active"'; } ?>><a href="precios">Precios</a></li>
+                
                 <li <?php if(isset($active) && $active == 'contactenos'){ echo 'class="active"'; } ?>><a href="contactenos">Contáctenos</a></li>
 
             <?php endif; ?>

@@ -14,37 +14,37 @@
 
         <ul class="nav navbar-nav">
 
-            <?php if( isset($_SESSION['usuarioTipo']) && $_SESSION['usuarioTipo'] == 'empleado' ): ?>
-                <li <?php if(isset($active) && $active == 'acerca'){ echo 'class="active"'; } ?> ><a href="acerca">Inventario</a></li>
-                <li <?php if(isset($active) && $active == 'servicios'){ echo 'class="active"'; } ?>><a href="servicios">Productos</a></li>
-                <li <?php if(isset($active) && $active == 'precios'){ echo 'class="active"'; } ?>><a href="precios">P</a></li>
-                <li <?php if(isset($active) && $active == 'contactenos'){ echo 'class="active"'; } ?>><a href="contactenos">C</a></li>
+            <?php if( isset($_SESSION['idRol']) && $_SESSION['idRol'] == 1 ): ?>
+                <li <?php if(isset($active) && $active == 'cliente'){ echo 'class="active"'; } ?>><a href="cliente">Inicio</a></li>
 
-            <?php elseif( isset($_SESSION['usuarioTipo']) && $_SESSION['usuarioTipo'] == 'cliente' ) : ?>
-                <li <?php if(isset($active) && $active == 'cita'){ echo 'class="active"'; } ?>><a href="cita">Citas</a></li>
-                <li <?php if(isset($active) && $active == 'servicios'){ echo 'class="active"'; } ?>><a href="servicios">B</a></li>
-                <li <?php if(isset($active) && $active == 'precios'){ echo 'class="active"'; } ?>><a href="precios">P</a></li>
-                <li <?php if(isset($active) && $active == 'contactenos'){ echo 'class="active"'; } ?>><a href="contactenos">C</a></li>
-                
+                <li <?php if(isset($active) && $active == 'mis_mascotas'){ echo 'class="active"'; } ?>><a href="mis_mascotas">Mascotas</a></li>
+
+                <li <?php if(isset($active) && $active == 'cita_clientes'){ echo 'class="active"'; } ?>><a href="cita_clientes">Citas</a></li>
 
 
-            <?php elseif( isset($_SESSION['usuarioTipo']) && $_SESSION['usuarioTipo'] == 'root' ) : ?>
+            <?php elseif( isset($_SESSION['idRol']) && $_SESSION['idRol'] == 2 ) : ?>
 
+
+                <li <?php if(isset($active) && $active == 'empleado'){ echo 'class="active"'; } ?>><a href="empleado">Inicio</a></li>
+                <li <?php if(isset($active) && $active == 'productos'){ echo 'class="active"'; } ?>><a href="productos">Productos</a></li>
+                <li <?php if(isset($active) && $active == 'cita_empleados'){ echo 'class="active"'; } ?>><a href="cita_empleados">Citas</a></li>
+
+            <?php elseif( isset($_SESSION['idRol']) && $_SESSION['idRol'] == 3 ) : ?>
+                <li <?php if(isset($active) && $active == 'admin'){ echo 'class="active"'; } ?>><a href="admin">Inicio</a></li>
+                <li <?php if(isset($active) && $active == 'cita_root'){ echo 'class="active"'; } ?>><a href="cita_root">Citas</a></li>
                 <li class="dropdown">
                     <a  <?php if(isset($active) && $active == 'usuarios'){ echo 'class="active"'; } ?>  href="usuarios" class="dropdown-toggle" data-toggle="dropdown"> Mantenimiento <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li> <a href="usuario"> Usuarios </a></li>
+                        <li> <a href="usuarios"> Usuarios </a></li>
 
                         <li class="divider"></li>
 
-                        <li><a href="logout"> <span class="fa fa-external-link"></span> Configuración </a></li>
+                        <li><a href="#"> <span class="fa fa-external-link"></span> Configuración </a></li>
 
                     </ul>
                 </li>
 
-                <li <?php if(isset($active) && $active == 'servicios'){ echo 'class="active"'; } ?>><a href="servicios">B</a></li>
-                <li <?php if(isset($active) && $active == 'precios'){ echo 'class="active"'; } ?>><a href="precios">P</a></li>
-                <li <?php if(isset($active) && $active == 'contactenos'){ echo 'class="active"'; } ?>><a href="contactenos">C</a></li>
+
 
             <?php else: ?>
 
@@ -88,3 +88,8 @@
 </nav>
 
 <div class="container">
+
+
+
+
+
